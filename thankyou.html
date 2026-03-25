@@ -1,17 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Thank You</title>
+    <!--
+    Program name: thankyou.html
+    Author: Amatullah Kanchwala
+    Date created: 02/25/2026
+    Date last edited: 03/25/2026
+    Version: 2.0
+    Description: Thank you page displayed after patient registration form submission.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Horizon Medical</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        function displayDate() {
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById("date").innerHTML =
+                "Today is: " + today.toLocaleDateString('en-US', options);
+        }
+    </script>
 </head>
 
-<body>
+<body onload="displayDate()">
+    <!-- Header section -->
+    <div id="header">
+        <img src="logo.png" alt="Horizon Medical Logo" id="logo">
+        <h1>Horizon Medical</h1>
+        <p id="date"></p>
+    </div>
 
-<div id="header">
-    <h1>Horizon Medical</h1>
-</div>
+    <!-- Thank you message -->
+    <div id="main-content">
+        <h2>Thank You for Your Submission</h2>
+        <p style="text-align:center; font-size:18px;">
+            Your patient registration form has been successfully submitted.
+        </p>
+    </div>
 
-<h2 style="text-align:center;">Thank you for your submission.</h2>
+    <!-- Footer section -->
+    <div id="footer">
+        <div class="footer-left">
+            <p>Horizon Medical</p>
+            <p>PO Box 18881</p>
+            <p>Sugar Land, TX 77496</p>
+        </div>
 
+        <div class="footer-center">
+            <button type="button">Contact Us</button>
+        </div>
+
+        <div class="footer-right">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+    <!-- End of document -->
 </body>
 </html>
