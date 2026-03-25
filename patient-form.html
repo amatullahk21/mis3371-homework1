@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        const today = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("date").innerHTML =
+                "Today is: " + today.toLocaleDateString('en-US', options);
+        });
+    </script>
+</head>
+
+<body>
+
+<div id="header">
+    <img src="logo.png" width="200">
+    <h1>Horizon Medical</h1>
+    <p id="date"></p>
+</div>
+
+<h2>Patient Registration Form</h2>
+
+<form action="thankyou.html">
+
+<table>
+<tr>
+<td>First Name:</td>
+<td><input type="text" maxlength="30"></td>
+</tr>
+
+<tr>
+<td>Last Name:</td>
+<td><input type="text" maxlength="30"></td>
+</tr>
+
+<tr>
+<td>Date of Birth:</td>
+<td><input type="text" placeholder="MM/DD/YYYY"></td>
+</tr>
+
+<tr>
+<td>Email:</td>
+<td><input type="email"></td>
+</tr>
+
+<tr>
+<td>Symptoms:</td>
+<td><textarea rows="3" cols="50"></textarea></td>
+</tr>
+
+<tr>
+<td>Gender:</td>
+<td>
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
+</td>
+</tr>
+
+<tr>
+<td>Health (1–10):</td>
+<td><input type="range" min="1" max="10"></td>
+</tr>
+
+<tr>
+<td>User ID:</td>
+<td><input type="text" maxlength="20"></td>
+</tr>
+
+<tr>
+<td>Password:</td>
+<td><input type="password"></td>
+</tr>
+
+<tr>
+<td>Confirm Password:</td>
+<td><input type="password"></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<input type="reset" value="CLEAR AND START OVER">
+<input type="submit" value="Submit">
+</td>
+</tr>
+
+</table>
+
+</form>
+
+<div id="footer">
+    <button>Contact Us</button>
+</div>
+
+</body>
+</html>
