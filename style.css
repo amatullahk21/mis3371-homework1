@@ -167,3 +167,9 @@ button:hover {
 .footer-right a:visited {
     color: #d6c2ff;
 }
+
+input[name="fname"] {
+    background-color: #fdfdfd;
+}
+
+/* End of style.css document */
